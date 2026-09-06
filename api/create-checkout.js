@@ -37,8 +37,8 @@ export default async function handler(req, res) {
         },
       ],
       mode: 'payment',
-      success_url: `${process.env.VERCEL_URL || 'http://localhost:3000'}/success?session_id={CHECKOUT_SESSION_ID}&email=${encodeURIComponent(email)}&name=${encodeURIComponent(name)}&program=${encodeURIComponent(program)}`,
-      cancel_url: `${process.env.VERCEL_URL || 'http://localhost:3000'}/revisions-propostes.html`,
+      success_url: `${process.env.SITE_URL || 'http://localhost:3000'}/success?session_id={CHECKOUT_SESSION_ID}&email=${encodeURIComponent(email)}&name=${encodeURIComponent(name)}&program=${encodeURIComponent(program)}`,
+      cancel_url: `${process.env.SITE_URL || 'http://localhost:3000'}/revisions-propostes.html`,
       customer_email: email,
       metadata: {
         client_name: name,
