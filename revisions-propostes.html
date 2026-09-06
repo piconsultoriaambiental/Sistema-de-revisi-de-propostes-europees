@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revisió de Propostes de Finançament Europeu | PI Consultoria</title>
+  <meta name="description" content="Revisió professional de propostes de Horizon Europe, LIFE, Next Med i altres programes europeus. Feedback expert en 72 hores. 900€.">
+  <meta name="keywords" content="revisió propostes, Horizon Europe, LIFE, Next Med, feedback europeu, consultoria">
+  <meta property="og:title" content="Revisió de Propostes Europees">
+  <meta property="og:description" content="Feedback expert en 72 hores per a propostes de finançament europeu.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,300&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #111510;
+      --forest: #162B1E;
+      --moss: #274D38;
+      --fern: #3D7A56;
+      --gold: #A86B38;
+      --med-blue: #1C6496;
+      --linen: #F2EDE3;
+      --paper: #F8F7F3;
+      --rule: rgba(20,46,28,0.12);
+      --title-font: 'Playfair Display', Georgia, serif;
+      --serif: 'Fraunces', Georgia, serif;
+      --mono: 'DM Mono', monospace;
+      --sans: 'Outfit', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: var(--sans);
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER/NAV ────────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(248, 247, 243, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      padding: 16px 4vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--forest);
+    }
+
+    .logo-text {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--moss);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: var(--linen);
+      font-weight: bold;
+    }
+
+    /* ── HERO SECTION ────────────────────────────────── */
+    .hero {
+      padding: 80px 4vw;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--moss);
+      margin-bottom: 20px;
+      display: inline-block;
+      padding: 6px 14px;
+      background: rgba(39, 77, 56, 0.08);
+      border-radius: 2px;
+    }
+
+    h1 {
+      font-family: var(--title-font);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin: 20px 0 30px;
+      color: var(--forest);
+      letter-spacing: -0.02em;
+    }
+
+    .hero-description {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #444;
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-family: var(--serif);
+      font-weight: 300;
+    }
+
+    /* ── PRICE HERO ────────────────────────────────── */
+    .price-highlight {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 8px;
+      margin: 40px 0;
+    }
+
+    .price-amount {
+      font-family: var(--title-font);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--med-blue);
+    }
+
+    .price-label {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--moss);
+    }
+
+    /* ── CTA BUTTON ────────────────────────────────── */
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 32px;
+      background: var(--forest);
+      color: var(--paper);
+      border: none;
+      border-radius: 3px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-top: 30px;
+    }
+
+    .cta-button:hover {
+      background: var(--moss);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(22, 43, 30, 0.2);
+    }
+
+    /* ── CONTENT SECTIONS ────────────────────────────── */
+    .content-section {
+      padding: 80px 4vw;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-section.alt {
+      background: rgba(22, 43, 30, 0.03);
+    }
+
+    .section-title {
+      font-family: var(--title-font);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--forest);
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    /* ── WHAT WE REVIEW ────────────────────────────── */
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .review-card {
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .review-card:hover {
+      border-color: var(--moss);
+      box-shadow: 0 12px 32px rgba(39, 77, 56, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .review-card-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(39, 77, 56, 0.1);
+      border-radius: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--moss);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .review-card h3 {
+      font-family: var(--title-font);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    .review-card p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+      font-family: var(--serif);
+      font-weight: 300;
+    }
+
+    /* ── 72 HOURS SECTION ────────────────────────────– */
+    .timeline-section {
+      background: linear-gradient(135deg, rgba(22, 43, 30, 0.05), rgba(28, 100, 150, 0.05));
+      padding: 60px;
+      border-radius: 6px;
+      border-left: 4px solid var(--med-blue);
+    }
+
+    .timeline-section h2 {
+      font-family: var(--title-font);
+      font-size: 2.2rem;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+
+    .timeline-section p {
+      font-size: 18px;
+      color: #555;
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .timeline-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .step {
+      position: relative;
+      padding-left: 40px;
+    }
+
+    .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--moss);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: var(--mono);
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .step h4 {
+      font-family: var(--title-font);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--forest);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #666;
+      font-family: var(--serif);
+      font-weight: 300;
+    }
+
+    /* ── WHAT'S INCLUDED ────────────────────────────– */
+    .included-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 40px 0;
+    }
+
+    .included-item {
+      display: flex;
+      gap: 15px;
+      padding: 16px;
+      background: white;
+      border-radius: 4px;
+      border: 1px solid var(--rule);
+    }
+
+    .included-check {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      background: var(--moss);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+    }
+
+    .included-item p {
+      font-size: 15px;
+      color: #555;
+      font-family: var(--serif);
+      font-weight: 300;
+    }
+
+    /* ── METHODOLOGY ────────────────────────────────– */
+    .methodology-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .method-box {
+      padding: 32px;
+      background: white;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+
+    .method-box h3 {
+      font-family: var(--title-font);
+      font-size: 1.3rem;
+      color: var(--forest);
+      margin-bottom: 12px;
+    }
+
+    .method-box p {
+      font-size: 15px;
+      color: #666;
+      font-family: var(--serif);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ── PROGRAMS COVERED ────────────────────────────– */
+    .programs-section {
+      margin: 40px 0;
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .program-badge {
+      padding: 14px 16px;
+      background: rgba(39, 77, 56, 0.08);
+      border: 1px solid rgba(39, 77, 56, 0.2);
+      border-radius: 3px;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--moss);
+      transition: all 0.2s;
+    }
+
+    .program-badge:hover {
+      background: var(--moss);
+      color: white;
+    }
+
+    /* ── ABOUT SECTION ────────────────────────────── */
+    .about-expert {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .expert-text h3 {
+      font-family: var(--title-font);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--forest);
+      margin-bottom: 20px;
+    }
+
+    .expert-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-weight: 300;
+    }
+
+    .credentials {
+      margin-top: 30px;
+      padding-top: 30px;
+      border-top: 1px solid var(--rule);
+    }
+
+    .credential-item {
+      font-size: 14px;
+      color: var(--moss);
+      margin: 8px 0;
+      font-family: var(--mono);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── FOOTER ────────────────────────────────────– */
+    footer {
+      background: var(--forest);
+      color: var(--linen);
+      padding: 40px 4vw;
+      text-align: center;
+      font-size: 14px;
+      font-family: var(--mono);
+    }
+
+    footer a {
+      color: var(--linen);
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    footer a:hover {
+      opacity: 1;
+    }
+
+    /* ── RESPONSIVE ────────────────────────────────– */
+    @media (max-width: 768px) {
+      h1 { font-size: 2rem; }
+      .hero { padding: 60px 4vw; }
+      .content-section { padding: 60px 4vw; }
+      .timeline-section { padding: 40px; }
+      .about-expert { grid-template-columns: 1fr; gap: 40px; }
+      .price-amount { font-size: 2.2rem; }
+      .cta-button { padding: 14px 24px; font-size: 11px; }
+    }
+
+    /* ── STRIPE MODAL HIDDEN BY DEFAULT ──────────────– */
+    #stripe-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    #stripe-modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: 8px;
+      padding: 40px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .modal-title {
+      font-family: var(--title-font);
+      font-size: 1.8rem;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+
+    .modal-subtitle {
+      color: #999;
+      margin-bottom: 30px;
+      font-family: var(--serif);
+      font-size: 14px;
+    }
+
+    #stripe-element {
+      padding: 12px;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      margin-bottom: 20px;
+      font-family: var(--sans);
+    }
+
+    .modal-button {
+      width: 100%;
+      padding: 14px;
+      background: var(--forest);
+      color: white;
+      border: none;
+      border-radius: 3px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .modal-button:hover {
+      background: var(--moss);
+    }
+
+    .modal-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">
+    <div class="logo-icon">π</div>
+    <div class="logo-text">PI <strong>CONSULTORIA</strong></div>
+  </a>
+  <a href="mailto:piconsultoria@piconsultoria.eu" style="text-decoration: none; color: var(--ink); opacity: 0.7; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase;">Contacte</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-tag">Revisió de Propostes</div>
+  <h1>Feedback Expert per a Propostes Europees</h1>
+  <p class="hero-description">
+    Obté revisió crítica i constructiva de la teva proposta de finançament europeu en 72 hores. Cobertura per a Horizon Europe, LIFE, Next Med i altres programes. Feedback que accelera l'aprovació.
+  </p>
+  
+  <div class="price-highlight">
+    <span class="price-amount">900€</span>
+    <span class="price-label">per proposta</span>
+  </div>
+
+  <button class="cta-button" onclick="openStripeModal()">
+    <i class="fas fa-lock"></i> Iniciar Revisió
+  </button>
+</section>
+
+<!-- WHAT WE REVIEW -->
+<section class="content-section alt">
+  <h2 class="section-title">Què Revisem</h2>
+  <div class="review-grid">
+    <div class="review-card">
+      <div class="review-card-icon">📋</div>
+      <h3>Estructura i Narrativa</h3>
+      <p>Validem que la proposta segueixi la lògica de la convocatòria i que la narrativa sigui coherent, clara i persuasiva.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card-icon">🎯</div>
+      <h3>Alineament amb Criteris</h3>
+      <p>Comprovem que tots els criteris d'avaluació estàn explícitament adreçats amb evidència suficient.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card-icon">💡</div>
+      <h3>Innovació i Impacte</h3>
+      <p>Assessoram sobre com reforçar la proposta d'innovació i destacar els resultats esperats.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card-icon">🔍</div>
+      <h3>Viabilitat Tècnica</h3>
+      <p>Validem la robustesa del disseny de projecte, cronograma i gestió de riscos.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card-icon">💰</div>
+      <h3>Pressupost i Sustentabilitat</h3>
+      <p>Revisem la coherència del pressupost amb les activitats i l'estratègia de sostenibilitat del projecte.</p>
+    </div>
+    <div class="review-card">
+      <div class="review-card-icon">⚖️</div>
+      <h3>Compliment Legal</h3>
+      <p>Verificem que la proposta compleix amb els requeriments administratius i normatius exigits.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 72 HOURS SECTION -->
+<section class="content-section">
+  <div class="timeline-section">
+    <h2>Resposta en 72 Hores</h2>
+    <p>
+      Entenem que els temps són crítics. Per aquesta raó, comprometem una revisió completa de la teva proposta dins de 72 hores hàbils des de la recepció del document.
+    </p>
+    
+    <div class="timeline-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Recepció</h4>
+        <p>Reps confirmació de rebuda i programació del teu slot de revisió.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Lectura Crítica</h4>
+        <p>Revisió profunda amb avaluació críteria a críteria i nota de debilitats claus.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Feedback Documentat</h4>
+        <p>Informe detallat en PDF amb comentaris, recomanacions i prioritats de millora.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Seguiment (Opcional)</h4>
+        <p>Sessió de 30 min per vídeo per clarificar qualsevol punt de l'informe (+ 200€).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS COVERED -->
+<section class="content-section alt">
+  <h2 class="section-title">Programes Que Cobrimos</h2>
+  <div class="programs-section">
+    <div class="programs-grid">
+      <div class="program-badge">Horizon Europe</div>
+      <div class="program-badge">LIFE</div>
+      <div class="program-badge">Next Med</div>
+      <div class="program-badge">Interreg</div>
+      <div class="program-badge">FEDER</div>
+      <div class="program-badge">Energiesprong</div>
+      <div class="program-badge">New European Bauhaus</div>
+      <div class="program-badge">Altres programes UE</div>
+    </div>
+  </div>
+  <p style="text-align: center; color: #999; font-family: var(--serif); font-size: 14px; margin-top: 30px;">
+    <em>No és la teva? Contacta'ns per valorar cobertura específica.</em>
+  </p>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="content-section">
+  <h2 class="section-title">Què Inclou la Revisió</h2>
+  <div class="included-list">
+    <div class="included-item">
+      <div class="included-check">✓</div>
+      <p><strong>Informe PDF</strong> amb resumen ejecutivo i retroalimentació estructura</p>
+    </div>
+    <div class="included-item">
+      <div class="included-check">✓</div>
+      <p><strong>Comentaris en-document</strong> amb suggerencies específiques</p>
+    </div>
+    <div class="included-item">
+      <div class="included-check">✓</div>
+      <p><strong>Puntuació estimada</strong> als criteris d'avaluació</p>
+    </div>
+    <div class="included-item">
+      <div class="included-check">✓</div>
+      <p><strong>Prioritats de millora</strong> ordenades per impacte</p>
+    </div>
+    <div class="included-item">
+      <div class="included-check">✓</div>
+      <p><strong>Accés a referents</strong> de propostes fortes (si aplicable)</p>
+    </div>
+    <div class="included-item">
+      <div class="included-check">✓</div>
+      <p><strong>Garantia de qualitat</strong>: revisat per expert senior</p>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="content-section alt">
+  <h2 class="section-title">La Nostra Metodologia</h2>
+  <div class="methodology-grid">
+    <div class="method-box">
+      <h3>Lectura Critic Independent</h3>
+      <p>Primer lector sense contacte previ amb el projecte. Identifiquem debilitats des de la perspectiva de l'avaluador.</p>
+    </div>
+    <div class="method-box">
+      <h3>Validació de Criteris</h3>
+      <p>Punt a punt, comprovem que tots els criteris de la convocatoria estan ben adreçats amb evidència.</p>
+    </div>
+    <div class="method-box">
+      <h3>Benchmarking Implícit</h3>
+      <p>Contextualizem la proposta respecte a allò que els evaluadores esperaràn en termes de qualitat.</p>
+    </div>
+    <div class="method-box">
+      <h3>Feedback Actional</h3>
+      <p>No només identifiquem problemes: oferim solucions concretes i prioritzades per impacte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT EXPERT -->
+<section class="content-section">
+  <h2 class="section-title">Qui Fa Aquesta Revisió</h2>
+  <div class="about-expert">
+    <div class="expert-text">
+      <h3>Kirsten Cardenete</h3>
+      <p>
+        Fundadora de PI Consultoria i expert en captació de fons europeus amb més de 10 anys d'experiència en disseny de projectes i gestió de subvencions de l'Unió Europea.
+      </p>
+      <p>
+        Ha liderat propostes aprovades en Horizon Europe, LIFE, Interreg i altres programes amb una tasa de selecció superior a la mitjana del sector. Va actuar com avaluador extern per comissions de la Generalitat de Catalunya.
+      </p>
+      <p>
+        Especialista en narrativa estratègica, viabilitat tècnica i argumentació d'impacte. La seva revisió combina perspectiva de consultant (com escriure millor) i avaluador (com és jutjat).
+      </p>
+      <div class="credentials">
+        <div class="credential-item">✓ ACCIÓ-Accredited (Programes Europeus R+D+I)</div>
+        <div class="credential-item">✓ Evaluadora de projectes de sostenibilitat</div>
+        <div class="credential-item">✓ Specialista en economia circular i medi ambient</div>
+        <div class="credential-item">✓ Network amb institucions europees (UfM, WestMED, LIFE points)</div>
+      </div>
+    </div>
+    <div style="background: rgba(39, 77, 56, 0.08); padding: 40px; border-radius: 4px; height: fit-content;">
+      <p style="font-family: var(--serif); font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">
+        <em>"La diferència entre una proposta de 70 i una de 85 punts no és llargaria o més dades. És claritat, alignament estratègic, i resposta anticipada als dubtes dels avaluadors. Aquí és on enfoco la revisió."</em>
+      </em>
+      </p>
+      <p style="font-family: var(--mono); font-size: 12px; color: var(--moss); letter-spacing: 0.05em; text-transform: uppercase;">
+        — Kirsten Cardenete, Fundadora
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="content-section" style="text-align: center;">
+  <h2 class="section-title">Estàs Llest?</h2>
+  <p style="font-size: 18px; color: #666; max-width: 600px; margin: 0 auto 40px; font-family: var(--serif);">
+    La revisió expert és una inversió petita per evitar mesos d'espera a una proposta debilitada. Envia'ns la teva proposta avui.
+  </p>
+  <button class="cta-button" onclick="openStripeModal()">
+    <i class="fas fa-lock"></i> Pagar 900€ i Enviar Proposta
+  </button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>PI Consultoria Ambiental · Vilafranca del Penedès, Catalunya</p>
+  <p style="margin-top: 12px;">
+    <a href="mailto:piconsultoria@piconsultoria.eu">piconsultoria@piconsultoria.eu</a> · 
+    <a href="/">Torna a la web principal</a>
+  </p>
+  <p style="margin-top: 20px; opacity: 0.7;">© 2024 PI Consultoria. Tots els drets reservats.</p>
+</footer>
+
+<!-- PAYMENT FORM MODAL -->
+<div id="stripe-modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeStripeModal()">✕</button>
+    <h2 class="modal-title">Revisió de Proposta</h2>
+    <p class="modal-subtitle">900€ · Resposta en 72 hores</p>
+    
+    <form id="payment-form">
+      <div style="margin-bottom: 20px;">
+        <label style="font-family: var(--mono); font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Nom complet</label>
+        <input type="text" id="name" placeholder="Nom complet" required style="width: 100%; padding: 10px; border: 1px solid var(--rule); border-radius: 3px; font-family: var(--sans); font-size: 14px;">
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="font-family: var(--mono); font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Email</label>
+        <input type="email" id="email" placeholder="correo@example.com" required style="width: 100%; padding: 10px; border: 1px solid var(--rule); border-radius: 3px; font-family: var(--sans); font-size: 14px;">
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <label style="font-family: var(--mono); font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Programa Europeu</label>
+        <select id="program" required style="width: 100%; padding: 10px; border: 1px solid var(--rule); border-radius: 3px; font-family: var(--sans); font-size: 14px;">
+          <option value="">Selecciona...</option>
+          <option value="Horizon Europe">Horizon Europe</option>
+          <option value="LIFE">LIFE</option>
+          <option value="Next Med">Next Med</option>
+          <option value="Interreg">Interreg</option>
+          <option value="FEDER">FEDER</option>
+          <option value="Altres">Altres</option>
+        </select>
+      </div>
+
+      <div id="form-error" style="color: #fa755a; margin-bottom: 15px; font-size: 13px; display: none;"></div>
+
+      <button type="submit" class="modal-button" id="submit-button">
+        Pagar 900€ amb Stripe
+      </button>
+    </form>
+
+    <p style="text-align: center; font-size: 12px; color: #999; margin-top: 15px; font-family: var(--mono);">
+      Pagament segur amb Stripe · Redirigit a checkout oficial
+    </p>
+  </div>
+</div>
+
+<script>
+  function openStripeModal() {
+    document.getElementById('stripe-modal').classList.add('active');
+  }
+
+  function closeStripeModal() {
+    document.getElementById('stripe-modal').classList.remove('active');
+  }
+
+  document.getElementById('payment-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const program = document.getElementById('program').value;
+    const errorDiv = document.getElementById('form-error');
+    const submitButton = document.getElementById('submit-button');
+
+    // Validació
+    if (!name || !email || !program) {
+      errorDiv.textContent = 'Completa tots els camps';
+      errorDiv.style.display = 'block';
+      return;
+    }
+
+    errorDiv.style.display = 'none';
+    submitButton.disabled = true;
+    submitButton.textContent = 'Redirigint a pagament...';
+
+    try {
+      // Crida al backend per crear sessió de Stripe Checkout
+      const response = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          program: program
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.error) {
+        errorDiv.textContent = data.error;
+        errorDiv.style.display = 'block';
+        submitButton.disabled = false;
+        submitButton.textContent = 'Pagar 900€ amb Stripe';
+        return;
+      }
+
+      // Redirigir a Stripe Checkout
+      if (data.checkoutUrl) {
+        window.location.href = data.checkoutUrl;
+      }
+
+    } catch (error) {
+      console.error('Error:', error);
+      errorDiv.textContent = 'Error tècnic. Contacta amb piconsultoria@piconsultoria.eu';
+      errorDiv.style.display = 'block';
+      submitButton.disabled = false;
+      submitButton.textContent = 'Pagar 900€ amb Stripe';
+    }
+  });
+
+  // Tancar modal amb ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeStripeModal();
+  });
+</script>
+
+</body>
+</html>

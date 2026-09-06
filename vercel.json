@@ -1,0 +1,19 @@
+{
+  "functions": {
+    "api/create-checkout.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    },
+    "api/success.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "buildCommand": "npm install",
+  "env": [
+    "STRIPE_SECRET_KEY",
+    "RESEND_API_KEY",
+    "KIRSTEN_EMAIL",
+    "VERCEL_URL"
+  ]
+}
