@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Revisió de Propostes de Finançament Europeu | PI Consultoria</title>
-  <meta name="description" content="Revisió professional de propostes de Horizon Europe, LIFE, Next Med i altres programes europeus. Feedback expert en 72 hores. 900€.">
+  <meta name="description" content="Revisió professional de propostes de Horizon Europe, LIFE, Next Med i altres programes europeus. Feedback expert en 72 hores. 1.089€ (IVA inclòs).">
   <meta name="keywords" content="revisió propostes, Horizon Europe, LIFE, Next Med, feedback europeu, consultoria">
   <meta property="og:title" content="Revisió de Propostes Europees">
   <meta property="og:description" content="Feedback expert en 72 hores per a propostes de finançament europeu.">
@@ -88,10 +88,22 @@
 
     /* ── HERO SECTION ────────────────────────────────── */
     .hero {
-      padding: 80px 4vw;
-      max-width: 1200px;
-      margin: 0 auto;
+      position: relative;
+      padding: 150px 4vw 110px;
+      margin: 0;
       text-align: center;
+      background-color: var(--forest);
+      background-image:
+        linear-gradient(165deg, rgba(17, 21, 16, 0.82), rgba(22, 43, 30, 0.58)),
+        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
     }
 
     .hero-tag {
@@ -99,11 +111,12 @@
       font-size: 11px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--moss);
+      color: var(--linen);
       margin-bottom: 20px;
       display: inline-block;
       padding: 6px 14px;
-      background: rgba(39, 77, 56, 0.08);
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
       border-radius: 2px;
     }
 
@@ -113,14 +126,14 @@
       font-weight: 900;
       line-height: 1.1;
       margin: 20px 0 30px;
-      color: var(--forest);
+      color: var(--paper);
       letter-spacing: -0.02em;
     }
 
     .hero-description {
       font-size: 18px;
       line-height: 1.7;
-      color: #444;
+      color: rgba(248, 247, 243, 0.88);
       max-width: 700px;
       margin: 0 auto 50px;
       font-family: var(--serif);
@@ -133,14 +146,14 @@
       align-items: baseline;
       justify-content: center;
       gap: 8px;
-      margin: 40px 0;
+      margin: 40px 0 6px;
     }
 
     .price-amount {
       font-family: var(--title-font);
       font-size: 3rem;
       font-weight: 900;
-      color: var(--med-blue);
+      color: var(--gold);
     }
 
     .price-label {
@@ -148,7 +161,15 @@
       font-size: 12px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--moss);
+      color: rgba(248, 247, 243, 0.75);
+    }
+
+    .price-note {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: rgba(248, 247, 243, 0.6);
+      margin-bottom: 34px;
     }
 
     /* ── CTA BUTTON ────────────────────────────────── */
@@ -176,6 +197,16 @@
       background: var(--moss);
       transform: translateY(-2px);
       box-shadow: 0 8px 24px rgba(22, 43, 30, 0.2);
+    }
+
+    .cta-button.on-dark {
+      background: var(--paper);
+      color: var(--forest);
+    }
+
+    .cta-button.on-dark:hover {
+      background: var(--gold);
+      color: var(--paper);
     }
 
     /* ── CONTENT SECTIONS ────────────────────────────── */
@@ -229,8 +260,17 @@
       align-items: center;
       justify-content: center;
       color: var(--moss);
-      font-size: 24px;
       margin-bottom: 16px;
+    }
+
+    .review-card-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .included-check svg {
+      width: 13px;
+      height: 13px;
     }
 
     .review-card h3 {
@@ -417,18 +457,9 @@
 
     /* ── ABOUT SECTION ────────────────────────────── */
     .about-expert {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .expert-text h3 {
-      font-family: var(--title-font);
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--forest);
-      margin-bottom: 20px;
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .expert-text p {
@@ -444,14 +475,29 @@
       margin-top: 30px;
       padding-top: 30px;
       border-top: 1px solid var(--rule);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 28px;
     }
 
     .credential-item {
       font-size: 14px;
       color: var(--moss);
-      margin: 8px 0;
       font-family: var(--mono);
       letter-spacing: 0.05em;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .credential-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
     }
 
     /* ── FOOTER ────────────────────────────────────– */
@@ -481,7 +527,6 @@
       .hero { padding: 60px 4vw; }
       .content-section { padding: 60px 4vw; }
       .timeline-section { padding: 40px; }
-      .about-expert { grid-template-columns: 1fr; gap: 40px; }
       .price-amount { font-size: 2.2rem; }
       .cta-button { padding: 14px 24px; font-size: 11px; }
     }
@@ -586,55 +631,58 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-tag">Revisió de Propostes</div>
-  <h1>Feedback Expert per a Propostes Europees</h1>
-  <p class="hero-description">
-    Obté revisió crítica i constructiva de la teva proposta de finançament europeu en 72 hores. Cobertura per a Horizon Europe, LIFE, Next Med i altres programes. Feedback que accelera l'aprovació.
-  </p>
-  
-  <div class="price-highlight">
-    <span class="price-amount">900€</span>
-    <span class="price-label">per proposta</span>
-  </div>
+  <div class="hero-inner">
+    <div class="hero-tag">Revisió de propostes</div>
+    <h1>Feedback expert per a propostes europees</h1>
+    <p class="hero-description">
+      Obté una revisió crítica i constructiva de la teva proposta de finançament europeu en 72 hores. Cobertura per a Horizon Europe, LIFE, Next Med i altres programes. Feedback que accelera l'aprovació.
+    </p>
 
-  <button class="cta-button" onclick="openStripeModal()">
-    <i class="fas fa-lock"></i> Iniciar Revisió
-  </button>
+    <div class="price-highlight">
+      <span class="price-amount">1.089€</span>
+      <span class="price-label">per proposta</span>
+    </div>
+    <p class="price-note">IVA (21%) inclòs</p>
+
+    <button class="cta-button on-dark" onclick="openStripeModal()">
+      <i class="fas fa-lock"></i> Iniciar revisió
+    </button>
+  </div>
 </section>
 
 <!-- WHAT WE REVIEW -->
 <section class="content-section alt">
-  <h2 class="section-title">Què Revisem</h2>
+  <h2 class="section-title">Què revisem</h2>
   <div class="review-grid">
     <div class="review-card">
-      <div class="review-card-icon">📋</div>
-      <h3>Estructura i Narrativa</h3>
+      <div class="review-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6M9 9h1"/></svg></div>
+      <h3>Estructura i narrativa</h3>
       <p>Validem que la proposta segueixi la lògica de la convocatòria i que la narrativa sigui coherent, clara i persuasiva.</p>
     </div>
     <div class="review-card">
-      <div class="review-card-icon">🎯</div>
-      <h3>Alineament amb Criteris</h3>
-      <p>Comprovem que tots els criteris d'avaluació estàn explícitament adreçats amb evidència suficient.</p>
+      <div class="review-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+      <h3>Alineament amb els criteris</h3>
+      <p>Comprovem que tots els criteris d'avaluació estan explícitament adreçats amb evidència suficient.</p>
     </div>
     <div class="review-card">
-      <div class="review-card-icon">💡</div>
-      <h3>Innovació i Impacte</h3>
-      <p>Assessoram sobre com reforçar la proposta d'innovació i destacar els resultats esperats.</p>
+      <div class="review-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.6.5 1 1.3 1 2.1v.4h6v-.4c0-.8.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></div>
+      <h3>Innovació i impacte</h3>
+      <p>Assessorem sobre com reforçar la proposta d'innovació i destacar els resultats esperats.</p>
     </div>
     <div class="review-card">
-      <div class="review-card-icon">🔍</div>
-      <h3>Viabilitat Tècnica</h3>
-      <p>Validem la robustesa del disseny de projecte, cronograma i gestió de riscos.</p>
+      <div class="review-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+      <h3>Viabilitat tècnica</h3>
+      <p>Validem la robustesa del disseny del projecte, el cronograma i la gestió de riscos.</p>
     </div>
     <div class="review-card">
-      <div class="review-card-icon">💰</div>
-      <h3>Pressupost i Sustentabilitat</h3>
+      <div class="review-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c0-1.4-1.3-2.5-3-2.5s-3 1-3 2.3c0 3 6 1.4 6 4.3 0 1.4-1.3 2.4-3 2.4s-3-1-3-2.4"/></svg></div>
+      <h3>Pressupost i sostenibilitat</h3>
       <p>Revisem la coherència del pressupost amb les activitats i l'estratègia de sostenibilitat del projecte.</p>
     </div>
     <div class="review-card">
-      <div class="review-card-icon">⚖️</div>
-      <h3>Compliment Legal</h3>
-      <p>Verificem que la proposta compleix amb els requeriments administratius i normatius exigits.</p>
+      <div class="review-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 6l-6 3 6 3 6-3-6-3zM4 9v4a2 2 0 0 0 2 2M20 9v4a2 2 0 0 1-2 2M6 21h12"/></svg></div>
+      <h3>Compliment legal</h3>
+      <p>Verifiquem que la proposta compleix els requeriments administratius i normatius exigits.</p>
     </div>
   </div>
 </section>
@@ -642,31 +690,31 @@
 <!-- 72 HOURS SECTION -->
 <section class="content-section">
   <div class="timeline-section">
-    <h2>Resposta en 72 Hores</h2>
+    <h2>Resposta en 72 hores</h2>
     <p>
-      Entenem que els temps són crítics. Per aquesta raó, comprometem una revisió completa de la teva proposta dins de 72 hores hàbils des de la recepció del document.
+      Entenem que els terminis són crítics. Per això ens comprometem a fer una revisió completa de la teva proposta en un termini de 72 hores hàbils des de la recepció del document.
     </p>
-    
+
     <div class="timeline-steps">
       <div class="step">
         <div class="step-number">1</div>
         <h4>Recepció</h4>
-        <p>Reps confirmació de rebuda i programació del teu slot de revisió.</p>
+        <p>Reps confirmació de la recepció i la programació del teu torn de revisió.</p>
       </div>
       <div class="step">
         <div class="step-number">2</div>
-        <h4>Lectura Crítica</h4>
-        <p>Revisió profunda amb avaluació críteria a críteria i nota de debilitats claus.</p>
+        <h4>Lectura crítica</h4>
+        <p>Revisió profunda amb avaluació criteri a criteri i identificació de les debilitats clau.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
-        <h4>Feedback Documentat</h4>
+        <h4>Feedback documentat</h4>
         <p>Informe detallat en PDF amb comentaris, recomanacions i prioritats de millora.</p>
       </div>
       <div class="step">
         <div class="step-number">4</div>
-        <h4>Seguiment (Opcional)</h4>
-        <p>Sessió de 30 min per vídeo per clarificar qualsevol punt de l'informe (+ 200€).</p>
+        <h4>Seguiment (opcional)</h4>
+        <p>Sessió de 30 minuts per videotrucada per aclarir qualsevol punt de l'informe (+200€).</p>
       </div>
     </div>
   </div>
@@ -674,7 +722,7 @@
 
 <!-- PROGRAMS COVERED -->
 <section class="content-section alt">
-  <h2 class="section-title">Programes Que Cobrimos</h2>
+  <h2 class="section-title">Programes que cobrim</h2>
   <div class="programs-section">
     <div class="programs-grid">
       <div class="program-badge">Horizon Europe</div>
@@ -694,100 +742,87 @@
 
 <!-- WHAT'S INCLUDED -->
 <section class="content-section">
-  <h2 class="section-title">Què Inclou la Revisió</h2>
+  <h2 class="section-title">Què inclou la revisió</h2>
   <div class="included-list">
     <div class="included-item">
-      <div class="included-check">✓</div>
-      <p><strong>Informe PDF</strong> amb resumen ejecutivo i retroalimentació estructura</p>
+      <div class="included-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <p><strong>Informe en PDF</strong> amb resum executiu i retroalimentació estructurada</p>
     </div>
     <div class="included-item">
-      <div class="included-check">✓</div>
-      <p><strong>Comentaris en-document</strong> amb suggerencies específiques</p>
+      <div class="included-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <p><strong>Comentaris al document</strong> amb suggeriments específics</p>
     </div>
     <div class="included-item">
-      <div class="included-check">✓</div>
+      <div class="included-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
       <p><strong>Puntuació estimada</strong> als criteris d'avaluació</p>
     </div>
     <div class="included-item">
-      <div class="included-check">✓</div>
+      <div class="included-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
       <p><strong>Prioritats de millora</strong> ordenades per impacte</p>
     </div>
     <div class="included-item">
-      <div class="included-check">✓</div>
-      <p><strong>Accés a referents</strong> de propostes fortes (si aplicable)</p>
+      <div class="included-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <p><strong>Accés a referents</strong> de propostes fortes (si aplica)</p>
     </div>
     <div class="included-item">
-      <div class="included-check">✓</div>
-      <p><strong>Garantia de qualitat</strong>: revisat per expert senior</p>
+      <div class="included-check"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <p><strong>Garantia de qualitat</strong>: revisat per una experta sènior</p>
     </div>
   </div>
 </section>
 
 <!-- METHODOLOGY -->
 <section class="content-section alt">
-  <h2 class="section-title">La Nostra Metodologia</h2>
+  <h2 class="section-title">La nostra metodologia</h2>
   <div class="methodology-grid">
     <div class="method-box">
-      <h3>Lectura Critic Independent</h3>
-      <p>Primer lector sense contacte previ amb el projecte. Identifiquem debilitats des de la perspectiva de l'avaluador.</p>
+      <h3>Lectura crítica independent</h3>
+      <p>Una primera lectora sense contacte previ amb el projecte identifica les debilitats des de la perspectiva de qui avalua.</p>
     </div>
     <div class="method-box">
-      <h3>Validació de Criteris</h3>
-      <p>Punt a punt, comprovem que tots els criteris de la convocatoria estan ben adreçats amb evidència.</p>
+      <h3>Validació dels criteris</h3>
+      <p>Punt per punt, comprovem que tots els criteris de la convocatòria estan ben adreçats amb evidència.</p>
     </div>
     <div class="method-box">
-      <h3>Benchmarking Implícit</h3>
-      <p>Contextualizem la proposta respecte a allò que els evaluadores esperaràn en termes de qualitat.</p>
+      <h3>Referència implícita del sector</h3>
+      <p>Contextualitzem la proposta respecte al que les persones avaluadores esperen en termes de qualitat.</p>
     </div>
     <div class="method-box">
-      <h3>Feedback Actional</h3>
-      <p>No només identifiquem problemes: oferim solucions concretes i prioritzades per impacte.</p>
+      <h3>Feedback pràctic</h3>
+      <p>No ens limitem a identificar problemes: oferim solucions concretes i prioritzades per impacte.</p>
     </div>
   </div>
 </section>
 
 <!-- ABOUT EXPERT -->
 <section class="content-section">
-  <h2 class="section-title">Qui Fa Aquesta Revisió</h2>
+  <h2 class="section-title">Qui fa aquesta revisió</h2>
   <div class="about-expert">
     <div class="expert-text">
-      <h3>Kirsten Cardenete</h3>
       <p>
-        Fundadora de PI Consultoria i expert en captació de fons europeus amb més de 10 anys d'experiència en disseny de projectes i gestió de subvencions de l'Unió Europea.
+        La revisió la fa un equip de persones expertes que porten més de 10 anys treballant com a avaluadores de propostes europees en diferents convocatòries i que, alhora, es dediquen a redactar propostes, amb la qual cosa tenen una visió de 360 graus.
       </p>
       <p>
-        Ha liderat propostes aprovades en Horizon Europe, LIFE, Interreg i altres programes amb una tasa de selecció superior a la mitjana del sector. Va actuar com avaluador extern per comissions de la Generalitat de Catalunya.
-      </p>
-      <p>
-        Especialista en narrativa estratègica, viabilitat tècnica i argumentació d'impacte. La seva revisió combina perspectiva de consultant (com escriure millor) i avaluador (com és jutjat).
+        Especialitzades en narrativa estratègica, viabilitat tècnica i argumentació d'impacte. La revisió combina la perspectiva de la consultoria (com escriure-ho millor) i la de l'avaluació (com es jutja).
       </p>
       <div class="credentials">
-        <div class="credential-item">✓ ACCIÓ-Accredited (Programes Europeus R+D+I)</div>
-        <div class="credential-item">✓ Evaluadora de projectes de sostenibilitat</div>
-        <div class="credential-item">✓ Specialista en economia circular i medi ambient</div>
-        <div class="credential-item">✓ Network amb institucions europees (UfM, WestMED, LIFE points)</div>
+        <div class="credential-item">Acreditació ACCIÓ (Programes Europeus R+D+I)</div>
+        <div class="credential-item">Avaluació de projectes de sostenibilitat</div>
+        <div class="credential-item">Especialització en economia circular i medi ambient</div>
+        <div class="credential-item">Xarxa d'institucions europees (UfM, WestMED, LIFE points)</div>
       </div>
-    </div>
-    <div style="background: rgba(39, 77, 56, 0.08); padding: 40px; border-radius: 4px; height: fit-content;">
-      <p style="font-family: var(--serif); font-size: 14px; color: #666; line-height: 1.8; margin-bottom: 20px;">
-        <em>"La diferència entre una proposta de 70 i una de 85 punts no és llargaria o més dades. És claritat, alignament estratègic, i resposta anticipada als dubtes dels avaluadors. Aquí és on enfoco la revisió."</em>
-      </em>
-      </p>
-      <p style="font-family: var(--mono); font-size: 12px; color: var(--moss); letter-spacing: 0.05em; text-transform: uppercase;">
-        — Kirsten Cardenete, Fundadora
-      </p>
     </div>
   </div>
 </section>
 
 <!-- CTA FINAL -->
 <section class="content-section" style="text-align: center;">
-  <h2 class="section-title">Estàs Llest?</h2>
+  <h2 class="section-title">Comencem?</h2>
   <p style="font-size: 18px; color: #666; max-width: 600px; margin: 0 auto 40px; font-family: var(--serif);">
-    La revisió expert és una inversió petita per evitar mesos d'espera a una proposta debilitada. Envia'ns la teva proposta avui.
+    La revisió experta és una inversió petita per evitar mesos d'espera amb una proposta feble. Envia'ns la teva proposta avui.
   </p>
   <button class="cta-button" onclick="openStripeModal()">
-    <i class="fas fa-lock"></i> Pagar 900€ i Enviar Proposta
+    <i class="fas fa-lock"></i> Pagar 1.089€ i enviar la proposta
   </button>
 </section>
 
@@ -805,8 +840,8 @@
 <div id="stripe-modal">
   <div class="modal-content">
     <button class="modal-close" onclick="closeStripeModal()">✕</button>
-    <h2 class="modal-title">Revisió de Proposta</h2>
-    <p class="modal-subtitle">900€ · Resposta en 72 hores</p>
+    <h2 class="modal-title">Revisió de la proposta</h2>
+    <p class="modal-subtitle">1.089€ (IVA inclòs) · Resposta en 72 hores</p>
     
     <form id="payment-form">
       <div style="margin-bottom: 20px;">
@@ -816,7 +851,7 @@
 
       <div style="margin-bottom: 20px;">
         <label style="font-family: var(--mono); font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.05em; display: block; margin-bottom: 8px;">Email</label>
-        <input type="email" id="email" placeholder="correo@example.com" required style="width: 100%; padding: 10px; border: 1px solid var(--rule); border-radius: 3px; font-family: var(--sans); font-size: 14px;">
+        <input type="email" id="email" placeholder="correu@exemple.com" required style="width: 100%; padding: 10px; border: 1px solid var(--rule); border-radius: 3px; font-family: var(--sans); font-size: 14px;">
       </div>
 
       <div style="margin-bottom: 20px;">
@@ -835,7 +870,7 @@
       <div id="form-error" style="color: #fa755a; margin-bottom: 15px; font-size: 13px; display: none;"></div>
 
       <button type="submit" class="modal-button" id="submit-button">
-        Pagar 900€ amb Stripe
+        Pagar 1.089€ amb Stripe
       </button>
     </form>
 
@@ -892,7 +927,7 @@
         errorDiv.textContent = data.error;
         errorDiv.style.display = 'block';
         submitButton.disabled = false;
-        submitButton.textContent = 'Pagar 900€ amb Stripe';
+        submitButton.textContent = 'Pagar 1.089€ amb Stripe';
         return;
       }
 
@@ -906,7 +941,7 @@
       errorDiv.textContent = 'Error tècnic. Contacta amb piconsultoria@piconsultoria.eu';
       errorDiv.style.display = 'block';
       submitButton.disabled = false;
-      submitButton.textContent = 'Pagar 900€ amb Stripe';
+      submitButton.textContent = 'Pagar 1.089€ amb Stripe';
     }
   });
 
